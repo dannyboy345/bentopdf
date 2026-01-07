@@ -23,9 +23,9 @@ ARG BASE_URL
 ENV BASE_URL=$BASE_URL
 
 RUN if [ -z "$BASE_URL" ]; then \
-    npm run build -- --mode production; \
+    SIMPLE_MODE=true npm run build -- --mode production; \
     else \
-    npm run build -- --base=${BASE_URL} --mode production; \
+    SIMPLE_MODE=true npm run build -- --base=${BASE_URL} --mode production; \
     fi
 
 # Production stage
