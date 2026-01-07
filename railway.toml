@@ -1,0 +1,6 @@
+[build]
+builder = "dockerfile"
+dockerfilePath = "Dockerfile"
+
+[build.args]
+SIMPLE_MODE = "true"
