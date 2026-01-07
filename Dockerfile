@@ -2,7 +2,7 @@
 # Build to serve under Subdirectory BASE_URL if provided, eg: "ARG BASE_URL=/pdf/", otherwise leave blank: "ARG BASE_URL="
 ARG BASE_URL=
 
-# Build stage
+# Build stage - cache bust v2
 FROM node:20-alpine AS builder
 WORKDIR /app
 COPY package*.json ./
