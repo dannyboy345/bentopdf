@@ -214,7 +214,8 @@ export default defineConfig(({ mode }) => {
       }),
     ],
     define: {
-      __SIMPLE_MODE__: JSON.stringify(process.env.SIMPLE_MODE === 'true'),
+      // Hardcoded to true for self-hosted deployment
+      __SIMPLE_MODE__: true,
     },
     resolve: {
       alias: {
